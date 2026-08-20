@@ -258,6 +258,32 @@
                 if (queues.length === 0) {
                     resultsDiv.innerHTML = '<div style="text-align: center; padding: var(--gap); font-size: 18px;">Активних черг немає</div>';
                 } else {
+                    queues.sort((a, b) => {
+                        const dA = a.details || {};
+                        const dB = b.details || {};
+
+                        const isUrgentA = !!dA.cancel_at;
+                        const isUrgentB = !!dB.cancel_at;
+
+                        const catA = isUrgentA ? 1 : (dA.estimated_time ? 2 : 3);
+                        const catB = isUrgentB ? 1 : (dB.estimated_time ? 2 : 3);
+
+                        if (catA !== catB) {
+                            return catA - catB;
+                        }
+
+                        const timeStrA = isUrgentA ? dA.cancel_at : dA.estimated_time;
+                        const timeStrB = isUrgentB ? dB.cancel_at : dB.estimated_time;
+
+                        const dateA = parseUkrainianDate(timeStrA, data.updatedAt);
+                        const dateB = parseUkrainianDate(timeStrB, data.updatedAt);
+
+                        const tsA = dateA ? dateA.getTime() : Infinity;
+                        const tsB = dateB ? dateB.getTime() : Infinity;
+
+                        return tsA - tsB;
+                    });
+
                     let htmlContent = '';
 
                     queues.forEach(item => {
