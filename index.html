@@ -240,19 +240,13 @@
             resultsDiv.classList.add('loading');
 
             try {
-                const url = `https://api.github.com/repos/s0lidd/echerha/contents/data.json?t=${Date.now()}`;
+                const url = `https://cdn.jsdelivr.net/gh/s0lidd/echerha@main/data.json?t=${Date.now()}`;
 
-                const response = await fetch(url, {
-                    headers: {
-                        'Cache-Control': 'no-cache'
-                    }
-                });
+                const response = await fetch(url);
 
-                if (!response.ok) throw new Error('Дані ще не створені або репозиторій приватний');
+                if (!response.ok) throw new Error('Файл data.json ще не створено або репозиторій приватний');
 
-                const apiJson = await response.json();
-
-                const rawText = decodeURIComponent(escape(atob(apiJson.content)));
+                const rawText = await response.text();
 
                 if (rawText === currentDataStr) {
                     return;
@@ -348,7 +342,7 @@
             } catch (error) {
                 console.error(error);
                 if (currentDataStr === "") {
-                    resultsDiv.innerHTML = `<div style="text-align: center; padding: var(--gap);">Помилка завантаження даних. Перевірте посилання в коді.</div>`;
+                    resultsDiv.innerHTML = `<div style="text-align: center; padding: var(--gap);">Помилка завантаження даних. Перевірте наявність файлу data.json у репозиторії.</div>`;
                 }
             } finally {
                 btn.innerText = 'Оновити чергу';
