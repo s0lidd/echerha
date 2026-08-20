@@ -1,8 +1,6 @@
-name: Update5 Echerha Data
+name: Update Echerha Data
 
 on:
-  schedule:
-    - cron: '*/5 * * * *'
   workflow_dispatch:
 
 jobs:
