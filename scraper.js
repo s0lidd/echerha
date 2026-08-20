@@ -101,12 +101,23 @@ async function run() {
     const startTime = Date.now();
     const results = [];
 
-    for (let i = 0; i < cars.length; i++) {
-        console.log(`Перевірка [${i+1}/${cars.length}]: ${cars[i]}`);
-        const data = await processCar(cars[i]);
-        if (data) results.push(data);
-        
-        if (i < cars.length - 1) await delay(2500);
+    const BATCH_SIZE = 2;
+    const BATCH_DELAY = 1800; // Пауза 1.8 сек між пакетами
+
+    for (let i = 0; i < cars.length; i += BATCH_SIZE) {
+        const batch = cars.slice(i, i + BATCH_SIZE);
+        console.log(`Сканування пакету [${i + 1}-${Math.min(i + BATCH_SIZE, cars.length)} з ${cars.length}]...`);
+
+        const batchPromises = batch.map(plate => processCar(plate));
+        const batchResults = await Promise.all(batchPromises);
+
+        batchResults.forEach(res => {
+            if (res) results.push(res);
+        });
+
+        if (i + BATCH_SIZE < cars.length) {
+            await delay(BATCH_DELAY);
+        }
     }
 
     const endTime = Date.now();
@@ -118,7 +129,7 @@ async function run() {
     };
 
     fs.writeFileSync('data.json', JSON.stringify(finalData, null, 2));
-    console.log(`Сканування завершено! Збережено машин: ${results.length}`);
+    console.log(`Сканування завершено за ${((endTime - startTime) / 1000).toFixed(1)} сек! Збережено: ${results.length}`);
 }
 
 run();
