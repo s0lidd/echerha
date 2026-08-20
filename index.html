@@ -240,12 +240,19 @@
             resultsDiv.classList.add('loading');
 
             try {
-                const url = `https://raw.githubusercontent.com/s0lidd/echerha/data/data.json?t=${Date.now()}`;
-                const response = await fetch(url);
+                const url = `https://api.github.com/repos/s0lidd/echerha/contents/data.json?t=${Date.now()}`;
+
+                const response = await fetch(url, {
+                    headers: {
+                        'Cache-Control': 'no-cache'
+                    }
+                });
 
                 if (!response.ok) throw new Error('Дані ще не створені або репозиторій приватний');
 
-                const rawText = await response.text();
+                const apiJson = await response.json();
+
+                const rawText = decodeURIComponent(escape(atob(apiJson.content)));
 
                 if (rawText === currentDataStr) {
                     return;
@@ -268,9 +275,7 @@
                         const catA = isUrgentA ? 1 : (dA.estimated_time ? 2 : 3);
                         const catB = isUrgentB ? 1 : (dB.estimated_time ? 2 : 3);
 
-                        if (catA !== catB) {
-                            return catA - catB;
-                        }
+                        if (catA !== catB) return catA - catB;
 
                         const timeStrA = isUrgentA ? dA.cancel_at : dA.estimated_time;
                         const timeStrB = isUrgentB ? dB.cancel_at : dB.estimated_time;
