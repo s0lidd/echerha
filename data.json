@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-05T10:46:21.701Z",
+  "updatedAt": "2026-09-05T10:51:20.541Z",
   "queues": [
     {
       "plate": "CE 0285 ET",
@@ -12,8 +12,8 @@
           "icons": []
         },
         "semi_trailer_number": "CE 3842 XF",
-        "position": 50,
-        "estimated_time": "05 вересня 19:35"
+        "position": 51,
+        "estimated_time": "05 вересня 19:47"
       },
       "checkpoint": {
         "id": 3,
@@ -22,11 +22,11 @@
         "lat": 47.9889127444,
         "lng": 26.0600155406,
         "sub_title": "Україна - Румунія",
-        "description": "Порубне - Сірет\r\nМіжнародний пункт пропуску на чернівецькій дільниці українсько-румунського кордону.\r\n\r\nГрафік роботи: цілодобово\r\nАдреса: 2, Головна вул.Тереблече\r\nАвтошлях: М19\r\nТелефон: +380372585396<br><br>Орієнтовний час очікування для пріоритетних ТЗ:<span style=\"display:flex;flex-direction:column;gap:8px;margin-top:8px\"><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"Пріоритетний вантаж\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/2.svg?v=1\"><span>+</span><img title=\"AEO\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/13.svg?v=1\"><img title=\"T1\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/14.svg?v=1\"><img title=\"МДП\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/15.svg?v=1\"></span> — 7 хвилин</span><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"Пріоритетний вантаж\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/2.svg?v=1\"></span> — 7 хвилин</span><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"AEO\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/13.svg?v=1\"><img title=\"T1\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/14.svg?v=1\"><img title=\"МДП\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/15.svg?v=1\"></span> — 4 дні, 16 годин i 49 хвилин</span></span><br><br>Мінімальний час на в'їзд станом на 05.09.2026 13:45 - 180 хвилин",
+        "description": "Порубне - Сірет\r\nМіжнародний пункт пропуску на чернівецькій дільниці українсько-румунського кордону.\r\n\r\nГрафік роботи: цілодобово\r\nАдреса: 2, Головна вул.Тереблече\r\nАвтошлях: М19\r\nТелефон: +380372585396<br><br>Орієнтовний час очікування для пріоритетних ТЗ:<span style=\"display:flex;flex-direction:column;gap:8px;margin-top:8px\"><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"Пріоритетний вантаж\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/2.svg?v=1\"><span>+</span><img title=\"AEO\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/13.svg?v=1\"><img title=\"T1\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/14.svg?v=1\"><img title=\"МДП\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/15.svg?v=1\"></span> — 7 хвилин</span><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"Пріоритетний вантаж\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/2.svg?v=1\"></span> — 56 хвилин</span><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"AEO\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/13.svg?v=1\"><img title=\"T1\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/14.svg?v=1\"><img title=\"МДП\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/15.svg?v=1\"></span> — 4 дні, 16 годин i 56 хвилин</span></span><br><br>Мінімальний час на в'їзд станом на 05.09.2026 13:50 - 180 хвилин",
         "queue_flow": 1,
         "shared_type": 1,
         "country_id": 136,
-        "wait_time": 405720,
+        "wait_time": 406140,
         "priority_wait_times": [
           {
             "icon": 2,
@@ -38,7 +38,7 @@
             ],
             "priority_type": 1,
             "wait_time": 420,
-            "calculated_at": "2026-09-05 13:45:13"
+            "calculated_at": "2026-09-05 13:49:46"
           },
           {
             "icon": 2,
@@ -46,8 +46,8 @@
               2
             ],
             "priority_type": 2,
-            "wait_time": 420,
-            "calculated_at": "2026-09-05 13:45:13"
+            "wait_time": 3360,
+            "calculated_at": "2026-09-05 13:49:46"
           },
           {
             "icon": 13,
@@ -57,8 +57,8 @@
               15
             ],
             "priority_type": 3,
-            "wait_time": 406140,
-            "calculated_at": "2026-09-05 13:45:13"
+            "wait_time": 406560,
+            "calculated_at": "2026-09-05 13:49:46"
           }
         ],
         "free_slots_today": 0,
@@ -91,8 +91,8 @@
           "icons": []
         },
         "semi_trailer_number": "CE 4821 XP",
-        "position": 771,
-        "estimated_time": "09 вересня 07:42"
+        "position": 772,
+        "estimated_time": "09 вересня 07:54"
       },
       "checkpoint": {
         "id": 3,
@@ -101,11 +101,11 @@
         "lat": 47.9889127444,
         "lng": 26.0600155406,
         "sub_title": "Україна - Румунія",
-        "description": "Порубне - Сірет\r\nМіжнародний пункт пропуску на чернівецькій дільниці українсько-румунського кордону.\r\n\r\nГрафік роботи: цілодобово\r\nАдреса: 2, Головна вул.Тереблече\r\nАвтошлях: М19\r\nТелефон: +380372585396<br><br>Орієнтовний час очікування для пріоритетних ТЗ:<span style=\"display:flex;flex-direction:column;gap:8px;margin-top:8px\"><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"Пріоритетний вантаж\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/2.svg?v=1\"><span>+</span><img title=\"AEO\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/13.svg?v=1\"><img title=\"T1\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/14.svg?v=1\"><img title=\"МДП\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/15.svg?v=1\"></span> — 7 хвилин</span><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"Пріоритетний вантаж\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/2.svg?v=1\"></span> — 7 хвилин</span><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"AEO\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/13.svg?v=1\"><img title=\"T1\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/14.svg?v=1\"><img title=\"МДП\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/15.svg?v=1\"></span> — 4 дні, 16 годин i 49 хвилин</span></span><br><br>Мінімальний час на в'їзд станом на 05.09.2026 13:45 - 180 хвилин",
+        "description": "Порубне - Сірет\r\nМіжнародний пункт пропуску на чернівецькій дільниці українсько-румунського кордону.\r\n\r\nГрафік роботи: цілодобово\r\nАдреса: 2, Головна вул.Тереблече\r\nАвтошлях: М19\r\nТелефон: +380372585396<br><br>Орієнтовний час очікування для пріоритетних ТЗ:<span style=\"display:flex;flex-direction:column;gap:8px;margin-top:8px\"><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"Пріоритетний вантаж\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/2.svg?v=1\"><span>+</span><img title=\"AEO\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/13.svg?v=1\"><img title=\"T1\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/14.svg?v=1\"><img title=\"МДП\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/15.svg?v=1\"></span> — 7 хвилин</span><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"Пріоритетний вантаж\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/2.svg?v=1\"></span> — 56 хвилин</span><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"AEO\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/13.svg?v=1\"><img title=\"T1\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/14.svg?v=1\"><img title=\"МДП\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/15.svg?v=1\"></span> — 4 дні, 16 годин i 56 хвилин</span></span><br><br>Мінімальний час на в'їзд станом на 05.09.2026 13:50 - 180 хвилин",
         "queue_flow": 1,
         "shared_type": 1,
         "country_id": 136,
-        "wait_time": 405720,
+        "wait_time": 406140,
         "priority_wait_times": [
           {
             "icon": 2,
@@ -117,7 +117,7 @@
             ],
             "priority_type": 1,
             "wait_time": 420,
-            "calculated_at": "2026-09-05 13:45:13"
+            "calculated_at": "2026-09-05 13:50:57"
           },
           {
             "icon": 2,
@@ -125,8 +125,8 @@
               2
             ],
             "priority_type": 2,
-            "wait_time": 420,
-            "calculated_at": "2026-09-05 13:45:13"
+            "wait_time": 3360,
+            "calculated_at": "2026-09-05 13:50:57"
           },
           {
             "icon": 13,
@@ -136,8 +136,8 @@
               15
             ],
             "priority_type": 3,
-            "wait_time": 406140,
-            "calculated_at": "2026-09-05 13:45:13"
+            "wait_time": 406560,
+            "calculated_at": "2026-09-05 13:50:57"
           }
         ],
         "free_slots_today": 0,
@@ -170,8 +170,8 @@
           "icons": []
         },
         "semi_trailer_number": "CE 4822 XP",
-        "position": 726,
-        "estimated_time": "09 вересня 02:27"
+        "position": 727,
+        "estimated_time": "09 вересня 02:39"
       },
       "checkpoint": {
         "id": 3,
@@ -180,11 +180,11 @@
         "lat": 47.9889127444,
         "lng": 26.0600155406,
         "sub_title": "Україна - Румунія",
-        "description": "Порубне - Сірет\r\nМіжнародний пункт пропуску на чернівецькій дільниці українсько-румунського кордону.\r\n\r\nГрафік роботи: цілодобово\r\nАдреса: 2, Головна вул.Тереблече\r\nАвтошлях: М19\r\nТелефон: +380372585396<br><br>Орієнтовний час очікування для пріоритетних ТЗ:<span style=\"display:flex;flex-direction:column;gap:8px;margin-top:8px\"><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"Пріоритетний вантаж\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/2.svg?v=1\"><span>+</span><img title=\"AEO\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/13.svg?v=1\"><img title=\"T1\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/14.svg?v=1\"><img title=\"МДП\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/15.svg?v=1\"></span> — 7 хвилин</span><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"Пріоритетний вантаж\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/2.svg?v=1\"></span> — 7 хвилин</span><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"AEO\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/13.svg?v=1\"><img title=\"T1\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/14.svg?v=1\"><img title=\"МДП\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/15.svg?v=1\"></span> — 4 дні, 16 годин i 49 хвилин</span></span><br><br>Мінімальний час на в'їзд станом на 05.09.2026 13:45 - 180 хвилин",
+        "description": "Порубне - Сірет\r\nМіжнародний пункт пропуску на чернівецькій дільниці українсько-румунського кордону.\r\n\r\nГрафік роботи: цілодобово\r\nАдреса: 2, Головна вул.Тереблече\r\nАвтошлях: М19\r\nТелефон: +380372585396<br><br>Орієнтовний час очікування для пріоритетних ТЗ:<span style=\"display:flex;flex-direction:column;gap:8px;margin-top:8px\"><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"Пріоритетний вантаж\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/2.svg?v=1\"><span>+</span><img title=\"AEO\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/13.svg?v=1\"><img title=\"T1\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/14.svg?v=1\"><img title=\"МДП\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/15.svg?v=1\"></span> — 7 хвилин</span><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"Пріоритетний вантаж\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/2.svg?v=1\"></span> — 56 хвилин</span><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"AEO\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/13.svg?v=1\"><img title=\"T1\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/14.svg?v=1\"><img title=\"МДП\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/15.svg?v=1\"></span> — 4 дні, 16 годин i 56 хвилин</span></span><br><br>Мінімальний час на в'їзд станом на 05.09.2026 13:50 - 180 хвилин",
         "queue_flow": 1,
         "shared_type": 1,
         "country_id": 136,
-        "wait_time": 405720,
+        "wait_time": 406140,
         "priority_wait_times": [
           {
             "icon": 2,
@@ -196,7 +196,7 @@
             ],
             "priority_type": 1,
             "wait_time": 420,
-            "calculated_at": "2026-09-05 13:45:13"
+            "calculated_at": "2026-09-05 13:50:57"
           },
           {
             "icon": 2,
@@ -204,8 +204,8 @@
               2
             ],
             "priority_type": 2,
-            "wait_time": 420,
-            "calculated_at": "2026-09-05 13:45:13"
+            "wait_time": 3360,
+            "calculated_at": "2026-09-05 13:50:57"
           },
           {
             "icon": 13,
@@ -215,8 +215,8 @@
               15
             ],
             "priority_type": 3,
-            "wait_time": 406140,
-            "calculated_at": "2026-09-05 13:45:13"
+            "wait_time": 406560,
+            "calculated_at": "2026-09-05 13:50:57"
           }
         ],
         "free_slots_today": 0,
@@ -249,8 +249,8 @@
           "icons": []
         },
         "semi_trailer_number": "CE 0662 XT",
-        "position": 790,
-        "estimated_time": "09 вересня 09:55"
+        "position": 791,
+        "estimated_time": "09 вересня 10:07"
       },
       "checkpoint": {
         "id": 3,
@@ -259,11 +259,11 @@
         "lat": 47.9889127444,
         "lng": 26.0600155406,
         "sub_title": "Україна - Румунія",
-        "description": "Порубне - Сірет\r\nМіжнародний пункт пропуску на чернівецькій дільниці українсько-румунського кордону.\r\n\r\nГрафік роботи: цілодобово\r\nАдреса: 2, Головна вул.Тереблече\r\nАвтошлях: М19\r\nТелефон: +380372585396<br><br>Орієнтовний час очікування для пріоритетних ТЗ:<span style=\"display:flex;flex-direction:column;gap:8px;margin-top:8px\"><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"Пріоритетний вантаж\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/2.svg?v=1\"><span>+</span><img title=\"AEO\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/13.svg?v=1\"><img title=\"T1\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/14.svg?v=1\"><img title=\"МДП\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/15.svg?v=1\"></span> — 7 хвилин</span><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"Пріоритетний вантаж\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/2.svg?v=1\"></span> — 7 хвилин</span><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"AEO\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/13.svg?v=1\"><img title=\"T1\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/14.svg?v=1\"><img title=\"МДП\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/15.svg?v=1\"></span> — 4 дні, 16 годин i 49 хвилин</span></span><br><br>Мінімальний час на в'їзд станом на 05.09.2026 13:46 - 180 хвилин",
+        "description": "Порубне - Сірет\r\nМіжнародний пункт пропуску на чернівецькій дільниці українсько-румунського кордону.\r\n\r\nГрафік роботи: цілодобово\r\nАдреса: 2, Головна вул.Тереблече\r\nАвтошлях: М19\r\nТелефон: +380372585396<br><br>Орієнтовний час очікування для пріоритетних ТЗ:<span style=\"display:flex;flex-direction:column;gap:8px;margin-top:8px\"><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"Пріоритетний вантаж\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/2.svg?v=1\"><span>+</span><img title=\"AEO\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/13.svg?v=1\"><img title=\"T1\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/14.svg?v=1\"><img title=\"МДП\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/15.svg?v=1\"></span> — 7 хвилин</span><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"Пріоритетний вантаж\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/2.svg?v=1\"></span> — 56 хвилин</span><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"AEO\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/13.svg?v=1\"><img title=\"T1\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/14.svg?v=1\"><img title=\"МДП\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/15.svg?v=1\"></span> — 4 дні, 16 годин i 56 хвилин</span></span><br><br>Мінімальний час на в'їзд станом на 05.09.2026 13:51 - 180 хвилин",
         "queue_flow": 1,
         "shared_type": 1,
         "country_id": 136,
-        "wait_time": 405720,
+        "wait_time": 406140,
         "priority_wait_times": [
           {
             "icon": 2,
@@ -275,7 +275,7 @@
             ],
             "priority_type": 1,
             "wait_time": 420,
-            "calculated_at": "2026-09-05 13:45:13"
+            "calculated_at": "2026-09-05 13:50:57"
           },
           {
             "icon": 2,
@@ -283,8 +283,8 @@
               2
             ],
             "priority_type": 2,
-            "wait_time": 420,
-            "calculated_at": "2026-09-05 13:45:13"
+            "wait_time": 3360,
+            "calculated_at": "2026-09-05 13:50:57"
           },
           {
             "icon": 13,
@@ -294,8 +294,8 @@
               15
             ],
             "priority_type": 3,
-            "wait_time": 406140,
-            "calculated_at": "2026-09-05 13:45:13"
+            "wait_time": 406560,
+            "calculated_at": "2026-09-05 13:50:57"
           }
         ],
         "free_slots_today": 0,
@@ -328,8 +328,8 @@
           "icons": []
         },
         "semi_trailer_number": "CE 4911 XT",
-        "position": 737,
-        "estimated_time": "09 вересня 03:44"
+        "position": 738,
+        "estimated_time": "09 вересня 03:56"
       },
       "checkpoint": {
         "id": 3,
@@ -338,11 +338,11 @@
         "lat": 47.9889127444,
         "lng": 26.0600155406,
         "sub_title": "Україна - Румунія",
-        "description": "Порубне - Сірет\r\nМіжнародний пункт пропуску на чернівецькій дільниці українсько-румунського кордону.\r\n\r\nГрафік роботи: цілодобово\r\nАдреса: 2, Головна вул.Тереблече\r\nАвтошлях: М19\r\nТелефон: +380372585396<br><br>Орієнтовний час очікування для пріоритетних ТЗ:<span style=\"display:flex;flex-direction:column;gap:8px;margin-top:8px\"><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"Пріоритетний вантаж\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/2.svg?v=1\"><span>+</span><img title=\"AEO\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/13.svg?v=1\"><img title=\"T1\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/14.svg?v=1\"><img title=\"МДП\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/15.svg?v=1\"></span> — 7 хвилин</span><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"Пріоритетний вантаж\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/2.svg?v=1\"></span> — 7 хвилин</span><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"AEO\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/13.svg?v=1\"><img title=\"T1\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/14.svg?v=1\"><img title=\"МДП\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/15.svg?v=1\"></span> — 4 дні, 16 годин i 49 хвилин</span></span><br><br>Мінімальний час на в'їзд станом на 05.09.2026 13:46 - 180 хвилин",
+        "description": "Порубне - Сірет\r\nМіжнародний пункт пропуску на чернівецькій дільниці українсько-румунського кордону.\r\n\r\nГрафік роботи: цілодобово\r\nАдреса: 2, Головна вул.Тереблече\r\nАвтошлях: М19\r\nТелефон: +380372585396<br><br>Орієнтовний час очікування для пріоритетних ТЗ:<span style=\"display:flex;flex-direction:column;gap:8px;margin-top:8px\"><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"Пріоритетний вантаж\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/2.svg?v=1\"><span>+</span><img title=\"AEO\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/13.svg?v=1\"><img title=\"T1\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/14.svg?v=1\"><img title=\"МДП\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/15.svg?v=1\"></span> — 7 хвилин</span><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"Пріоритетний вантаж\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/2.svg?v=1\"></span> — 56 хвилин</span><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"AEO\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/13.svg?v=1\"><img title=\"T1\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/14.svg?v=1\"><img title=\"МДП\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/15.svg?v=1\"></span> — 4 дні, 16 годин i 56 хвилин</span></span><br><br>Мінімальний час на в'їзд станом на 05.09.2026 13:51 - 180 хвилин",
         "queue_flow": 1,
         "shared_type": 1,
         "country_id": 136,
-        "wait_time": 405720,
+        "wait_time": 406140,
         "priority_wait_times": [
           {
             "icon": 2,
@@ -354,7 +354,7 @@
             ],
             "priority_type": 1,
             "wait_time": 420,
-            "calculated_at": "2026-09-05 13:46:14"
+            "calculated_at": "2026-09-05 13:50:57"
           },
           {
             "icon": 2,
@@ -362,8 +362,8 @@
               2
             ],
             "priority_type": 2,
-            "wait_time": 420,
-            "calculated_at": "2026-09-05 13:46:14"
+            "wait_time": 3360,
+            "calculated_at": "2026-09-05 13:50:57"
           },
           {
             "icon": 13,
@@ -373,8 +373,8 @@
               15
             ],
             "priority_type": 3,
-            "wait_time": 406140,
-            "calculated_at": "2026-09-05 13:46:14"
+            "wait_time": 406560,
+            "calculated_at": "2026-09-05 13:50:57"
           }
         ],
         "free_slots_today": 0,
@@ -407,8 +407,8 @@
           "icons": []
         },
         "semi_trailer_number": "CE 4139 XT",
-        "position": 32,
-        "estimated_time": "05 вересня 17:29"
+        "position": 33,
+        "estimated_time": "05 вересня 17:41"
       },
       "checkpoint": {
         "id": 3,
@@ -417,11 +417,11 @@
         "lat": 47.9889127444,
         "lng": 26.0600155406,
         "sub_title": "Україна - Румунія",
-        "description": "Порубне - Сірет\r\nМіжнародний пункт пропуску на чернівецькій дільниці українсько-румунського кордону.\r\n\r\nГрафік роботи: цілодобово\r\nАдреса: 2, Головна вул.Тереблече\r\nАвтошлях: М19\r\nТелефон: +380372585396<br><br>Орієнтовний час очікування для пріоритетних ТЗ:<span style=\"display:flex;flex-direction:column;gap:8px;margin-top:8px\"><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"Пріоритетний вантаж\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/2.svg?v=1\"><span>+</span><img title=\"AEO\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/13.svg?v=1\"><img title=\"T1\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/14.svg?v=1\"><img title=\"МДП\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/15.svg?v=1\"></span> — 7 хвилин</span><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"Пріоритетний вантаж\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/2.svg?v=1\"></span> — 7 хвилин</span><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"AEO\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/13.svg?v=1\"><img title=\"T1\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/14.svg?v=1\"><img title=\"МДП\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/15.svg?v=1\"></span> — 4 дні, 16 годин i 49 хвилин</span></span><br><br>Мінімальний час на в'їзд станом на 05.09.2026 13:46 - 180 хвилин",
+        "description": "Порубне - Сірет\r\nМіжнародний пункт пропуску на чернівецькій дільниці українсько-румунського кордону.\r\n\r\nГрафік роботи: цілодобово\r\nАдреса: 2, Головна вул.Тереблече\r\nАвтошлях: М19\r\nТелефон: +380372585396<br><br>Орієнтовний час очікування для пріоритетних ТЗ:<span style=\"display:flex;flex-direction:column;gap:8px;margin-top:8px\"><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"Пріоритетний вантаж\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/2.svg?v=1\"><span>+</span><img title=\"AEO\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/13.svg?v=1\"><img title=\"T1\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/14.svg?v=1\"><img title=\"МДП\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/15.svg?v=1\"></span> — 7 хвилин</span><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"Пріоритетний вантаж\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/2.svg?v=1\"></span> — 56 хвилин</span><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"AEO\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/13.svg?v=1\"><img title=\"T1\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/14.svg?v=1\"><img title=\"МДП\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/15.svg?v=1\"></span> — 4 дні, 16 годин i 56 хвилин</span></span><br><br>Мінімальний час на в'їзд станом на 05.09.2026 13:51 - 180 хвилин",
         "queue_flow": 1,
         "shared_type": 1,
         "country_id": 136,
-        "wait_time": 405720,
+        "wait_time": 406140,
         "priority_wait_times": [
           {
             "icon": 2,
@@ -433,7 +433,7 @@
             ],
             "priority_type": 1,
             "wait_time": 420,
-            "calculated_at": "2026-09-05 13:46:14"
+            "calculated_at": "2026-09-05 13:50:57"
           },
           {
             "icon": 2,
@@ -441,8 +441,8 @@
               2
             ],
             "priority_type": 2,
-            "wait_time": 420,
-            "calculated_at": "2026-09-05 13:46:14"
+            "wait_time": 3360,
+            "calculated_at": "2026-09-05 13:50:57"
           },
           {
             "icon": 13,
@@ -452,8 +452,8 @@
               15
             ],
             "priority_type": 3,
-            "wait_time": 406140,
-            "calculated_at": "2026-09-05 13:46:14"
+            "wait_time": 406560,
+            "calculated_at": "2026-09-05 13:50:57"
           }
         ],
         "free_slots_today": 0,
@@ -486,8 +486,8 @@
           "icons": []
         },
         "semi_trailer_number": "CE 2704 XT",
-        "position": 138,
-        "estimated_time": "06 вересня 05:51"
+        "position": 139,
+        "estimated_time": "06 вересня 06:03"
       },
       "checkpoint": {
         "id": 3,
@@ -496,11 +496,11 @@
         "lat": 47.9889127444,
         "lng": 26.0600155406,
         "sub_title": "Україна - Румунія",
-        "description": "Порубне - Сірет\r\nМіжнародний пункт пропуску на чернівецькій дільниці українсько-румунського кордону.\r\n\r\nГрафік роботи: цілодобово\r\nАдреса: 2, Головна вул.Тереблече\r\nАвтошлях: М19\r\nТелефон: +380372585396<br><br>Орієнтовний час очікування для пріоритетних ТЗ:<span style=\"display:flex;flex-direction:column;gap:8px;margin-top:8px\"><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"Пріоритетний вантаж\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/2.svg?v=1\"><span>+</span><img title=\"AEO\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/13.svg?v=1\"><img title=\"T1\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/14.svg?v=1\"><img title=\"МДП\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/15.svg?v=1\"></span> — 7 хвилин</span><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"Пріоритетний вантаж\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/2.svg?v=1\"></span> — 7 хвилин</span><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"AEO\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/13.svg?v=1\"><img title=\"T1\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/14.svg?v=1\"><img title=\"МДП\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/15.svg?v=1\"></span> — 4 дні, 16 годин i 49 хвилин</span></span><br><br>Мінімальний час на в'їзд станом на 05.09.2026 13:46 - 180 хвилин",
+        "description": "Порубне - Сірет\r\nМіжнародний пункт пропуску на чернівецькій дільниці українсько-румунського кордону.\r\n\r\nГрафік роботи: цілодобово\r\nАдреса: 2, Головна вул.Тереблече\r\nАвтошлях: М19\r\nТелефон: +380372585396<br><br>Орієнтовний час очікування для пріоритетних ТЗ:<span style=\"display:flex;flex-direction:column;gap:8px;margin-top:8px\"><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"Пріоритетний вантаж\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/2.svg?v=1\"><span>+</span><img title=\"AEO\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/13.svg?v=1\"><img title=\"T1\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/14.svg?v=1\"><img title=\"МДП\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/15.svg?v=1\"></span> — 7 хвилин</span><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"Пріоритетний вантаж\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/2.svg?v=1\"></span> — 56 хвилин</span><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"AEO\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/13.svg?v=1\"><img title=\"T1\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/14.svg?v=1\"><img title=\"МДП\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/15.svg?v=1\"></span> — 4 дні, 16 годин i 56 хвилин</span></span><br><br>Мінімальний час на в'їзд станом на 05.09.2026 13:51 - 180 хвилин",
         "queue_flow": 1,
         "shared_type": 1,
         "country_id": 136,
-        "wait_time": 405720,
+        "wait_time": 406140,
         "priority_wait_times": [
           {
             "icon": 2,
@@ -512,7 +512,7 @@
             ],
             "priority_type": 1,
             "wait_time": 420,
-            "calculated_at": "2026-09-05 13:46:14"
+            "calculated_at": "2026-09-05 13:50:57"
           },
           {
             "icon": 2,
@@ -520,8 +520,8 @@
               2
             ],
             "priority_type": 2,
-            "wait_time": 420,
-            "calculated_at": "2026-09-05 13:46:14"
+            "wait_time": 3360,
+            "calculated_at": "2026-09-05 13:50:57"
           },
           {
             "icon": 13,
@@ -531,8 +531,8 @@
               15
             ],
             "priority_type": 3,
-            "wait_time": 406140,
-            "calculated_at": "2026-09-05 13:46:14"
+            "wait_time": 406560,
+            "calculated_at": "2026-09-05 13:50:57"
           }
         ],
         "free_slots_today": 0,
@@ -565,8 +565,8 @@
           "icons": []
         },
         "semi_trailer_number": "CE 5523 XT",
-        "position": 275,
-        "estimated_time": "06 вересня 21:50"
+        "position": 276,
+        "estimated_time": "06 вересня 22:02"
       },
       "checkpoint": {
         "id": 3,
@@ -575,11 +575,11 @@
         "lat": 47.9889127444,
         "lng": 26.0600155406,
         "sub_title": "Україна - Румунія",
-        "description": "Порубне - Сірет\r\nМіжнародний пункт пропуску на чернівецькій дільниці українсько-румунського кордону.\r\n\r\nГрафік роботи: цілодобово\r\nАдреса: 2, Головна вул.Тереблече\r\nАвтошлях: М19\r\nТелефон: +380372585396<br><br>Орієнтовний час очікування для пріоритетних ТЗ:<span style=\"display:flex;flex-direction:column;gap:8px;margin-top:8px\"><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"Пріоритетний вантаж\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/2.svg?v=1\"><span>+</span><img title=\"AEO\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/13.svg?v=1\"><img title=\"T1\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/14.svg?v=1\"><img title=\"МДП\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/15.svg?v=1\"></span> — 7 хвилин</span><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"Пріоритетний вантаж\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/2.svg?v=1\"></span> — 7 хвилин</span><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"AEO\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/13.svg?v=1\"><img title=\"T1\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/14.svg?v=1\"><img title=\"МДП\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/15.svg?v=1\"></span> — 4 дні, 16 годин i 49 хвилин</span></span><br><br>Мінімальний час на в'їзд станом на 05.09.2026 13:46 - 180 хвилин",
+        "description": "Порубне - Сірет\r\nМіжнародний пункт пропуску на чернівецькій дільниці українсько-румунського кордону.\r\n\r\nГрафік роботи: цілодобово\r\nАдреса: 2, Головна вул.Тереблече\r\nАвтошлях: М19\r\nТелефон: +380372585396<br><br>Орієнтовний час очікування для пріоритетних ТЗ:<span style=\"display:flex;flex-direction:column;gap:8px;margin-top:8px\"><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"Пріоритетний вантаж\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/2.svg?v=1\"><span>+</span><img title=\"AEO\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/13.svg?v=1\"><img title=\"T1\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/14.svg?v=1\"><img title=\"МДП\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/15.svg?v=1\"></span> — 7 хвилин</span><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"Пріоритетний вантаж\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/2.svg?v=1\"></span> — 56 хвилин</span><span style=\"display:flex;align-items:center;gap:8px;white-space:nowrap\"><span style=\"display:inline-flex;align-items:center;gap:4px\"><img title=\"AEO\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/13.svg?v=1\"><img title=\"T1\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/14.svg?v=1\"><img title=\"МДП\" src=\"https://back.echerha.gov.ua/assets/images/queue-icons/15.svg?v=1\"></span> — 4 дні, 16 годин i 56 хвилин</span></span><br><br>Мінімальний час на в'їзд станом на 05.09.2026 13:51 - 180 хвилин",
         "queue_flow": 1,
         "shared_type": 1,
         "country_id": 136,
-        "wait_time": 405720,
+        "wait_time": 406140,
         "priority_wait_times": [
           {
             "icon": 2,
@@ -591,7 +591,7 @@
             ],
             "priority_type": 1,
             "wait_time": 420,
-            "calculated_at": "2026-09-05 13:46:14"
+            "calculated_at": "2026-09-05 13:50:57"
           },
           {
             "icon": 2,
@@ -599,8 +599,8 @@
               2
             ],
             "priority_type": 2,
-            "wait_time": 420,
-            "calculated_at": "2026-09-05 13:46:14"
+            "wait_time": 3360,
+            "calculated_at": "2026-09-05 13:50:57"
           },
           {
             "icon": 13,
@@ -610,8 +610,8 @@
               15
             ],
             "priority_type": 3,
-            "wait_time": 406140,
-            "calculated_at": "2026-09-05 13:46:14"
+            "wait_time": 406560,
+            "calculated_at": "2026-09-05 13:50:57"
           }
         ],
         "free_slots_today": 0,
