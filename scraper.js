@@ -98,8 +98,8 @@ async function processCar(plate) {
         updateCookies(searchRes);
 
         if (searchRes.status === 429) {
-            console.log(`└ ⏳ Ліміт запитів (429). Чекаємо 10 секунд...`);
-            await delay(10000);
+            console.log(`└ ⏳ Ліміт запитів (429). Пауза…`);
+            await delay(8000);
             searchRes = await fetch(searchUrl, { headers: getHeaders() });
             updateCookies(searchRes);
         }
@@ -137,8 +137,8 @@ async function processCar(plate) {
         updateCookies(detailsRes);
 
         if (detailsRes.status === 429) {
-            console.log(`└ ⏳ Ліміт запитів (429) на деталях. Чекаємо 10 сек...`);
-            await delay(10000);
+            console.log(`└ ⏳ Ліміт запитів (429) на деталях. Пауза…`);
+            await delay(8000);
             detailsRes = await fetch(detailsUrl, { headers: getHeaders() });
             updateCookies(detailsRes);
         }
@@ -178,7 +178,7 @@ async function processCar(plate) {
 }
 
 async function run() {
-    console.log('Початок сканування...');
+    console.log('Початок сканування…');
     console.log(`Session ID: ${sessionDeviceId}`);
     const startTime = Date.now();
     const results = [];
@@ -189,7 +189,7 @@ async function run() {
         if (data) results.push(data);
         
         if (i < cars.length - 1) {
-            await delay(2500 + Math.random() * 1000);
+            await delay(800 + Math.random() * 400);
         }
     }
 
@@ -202,7 +202,7 @@ async function run() {
     };
 
     fs.writeFileSync('data.json', JSON.stringify(finalData, null, 2));
-    console.log(`\n🎉 Сканування завершено! Збережено машин: ${results.length}`);
+    console.log(`\n🎉 Сканування завершено за ${((endTime - startTime) / 1000).toFixed(1)} сек! Збережено машин: ${results.length}`);
 }
 
 run();
