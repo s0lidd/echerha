@@ -53,18 +53,22 @@ const cars = [
 ];
 
 const sessionDeviceId = crypto.randomUUID();
-const USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:156.0) Gecko/20100101 Firefox/156.0';
+const USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36';
 
 let sessionCookies = '';
 
 function getHeaders() {
     const headers = {
-    'Accept': 'application/json',
-    'Content-Type': 'application/json',
-        'Accept-Language': 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6',
-        'Connection': 'keep-alive',
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json',
+        'Accept-Language': 'uk-UA,uk;q=0.9,en-US;q=0.8,en;q=0.7',
+        'Cache-Control': 'no-cache',
+        'Pragma': 'no-cache',
         'Origin': 'https://echerha.gov.ua',
         'Referer': 'https://echerha.gov.ua/',
+        'Sec-Ch-Ua': '"Chromium";v="128", "Not=A?Brand";v="24", "Google Chrome";v="128"',
+        'Sec-Ch-Ua-Mobile': '?0',
+        'Sec-Ch-Ua-Platform': '"Windows"',
         'Sec-Fetch-Dest': 'empty',
         'Sec-Fetch-Mode': 'cors',
         'Sec-Fetch-Site': 'same-site',
@@ -90,24 +94,25 @@ function updateCookies(response) {
     }
 }
 
-async function safeFetch(url) {
-    while (true) {
+async function safeFetch(url, retries = 3) {
+    for (let attempt = 1; attempt <= retries; attempt++) {
         try {
             const res = await fetch(url, { headers: getHeaders() });
             updateCookies(res);
 
             if (res.status === 429) {
-                console.log(`└ ⏳ Ліміт запитів (429). Пауза…`);
+                console.log(`└ ⏳ Ліміт 429 (Спроба ${attempt}/${retries}). Пауза…`);
                 await delay(8000);
                 continue;
             }
 
             return res;
         } catch (err) {
-            console.log(`└ ⚠️ Мережева помилка. Пауза…`);
-            await delay(5000);
+            console.log(`└ ⚠️ Помилка мережі (Спроба ${attempt}/${retries}): ${err.message}`);
+            await delay(3000);
         }
     }
+    return null;
 }
 
 async function processCar(plate) {
@@ -115,23 +120,19 @@ async function processCar(plate) {
         const searchUrl = `https://back.echerha.gov.ua/api/v5/workload/search?plate_number=${encodeURIComponent(plate)}`;
         const searchRes = await safeFetch(searchUrl);
 
-        if (searchRes.status === 404) {
-            console.log(`└ ⚪ Немає в черзі (404)`);
+        if (!searchRes) {
+            console.log(`└ ❌ Не вдалося отримати відповідь від сервера`);
             return null;
         }
-        
-        const rawText = await searchRes.text();
 
-        if (!searchRes.ok) {
-            console.log(`└ ❌ Відмовлено сервером (HTTP ${searchRes.status})`);
-            return null;
-        }
+        const rawText = await searchRes.text();
 
         let searchData;
         try {
             searchData = JSON.parse(rawText);
         } catch (e) {
-            console.log(`└ 🛑 Блокування (Капча/HTML)`);
+            const cleanPreview = rawText.replace(/\s+/g, ' ').slice(0, 120);
+            console.log(`└ 🛑 WAF Блок (HTTP ${searchRes.status}). Текст: "${cleanPreview}…"`);
             return null;
         }
 
@@ -150,41 +151,38 @@ async function processCar(plate) {
         const detailsUrl = `https://back.echerha.gov.ua/api/v5/workload/1/checkpoints/${carBase.checkpoint_id}/details/${carBase.shared_type}/${carBase.queue_status}?page=1&plate_number=${encodeURIComponent(plate)}`;
         const detailsRes = await safeFetch(detailsUrl);
 
-        if (detailsRes.status === 404) {
-            console.log(`└ ⚪ Деталі не знайдені (404)`);
-            return null;
-        }
-        
+        if (!detailsRes) return null;
+
         const rawDetailsText = await detailsRes.text();
-        
-        if (!detailsRes.ok) {
-            console.log(`└ ❌ Помилка деталей (HTTP ${detailsRes.status})`);
-            return null;
-        }
 
         let detailsData;
         try {
             detailsData = JSON.parse(rawDetailsText);
         } catch (e) {
-            console.log(`└ 🛑 Блокування на деталях (Капча/HTML)`);
+            console.log(`└ 🛑 WAF Блок на деталях (HTTP ${detailsRes.status})`);
+            return null;
+        }
+
+        if (!detailsData.data || detailsData.data.length === 0) {
+            console.log(`└ ⚪ Деталі порожні`);
             return null;
         }
 
         const details = detailsData.data[0];
-        
+
         if (details.time_on_inspection) {
             console.log(`└ 🟡 На інспекції`);
             return null;
         }
 
-        console.log(`└ ✅ Успішно знайдено!`);
+        console.log(`└ ✅ Знайдено!`);
         return {
             plate: plate,
             details: details,
             checkpoint: detailsData.checkpoint
         };
     } catch (error) {
-        console.error(`  ⚠️ Помилка виконання:`, error.message);
+        console.error(`  ⚠️ Помилка:`, error.message);
         return null;
     }
 }
@@ -199,7 +197,7 @@ async function run() {
         console.log(`\n[${i+1}/${cars.length}] Перевірка: ${cars[i]}`);
         const data = await processCar(cars[i]);
         if (data) results.push(data);
-        
+
         if (i < cars.length - 1) {
             await delay(800 + Math.random() * 400);
         }
@@ -214,7 +212,7 @@ async function run() {
     };
 
     fs.writeFileSync('data.json', JSON.stringify(finalData, null, 2));
-    console.log(`\n🎉 Сканування завершено за ${((endTime - startTime) / 1000).toFixed(1)} сек! Збережено машин: ${results.length}`);
+    console.log(`\n🎉 Завершено за ${((endTime - startTime) / 1000).toFixed(1)} сек! Збережено: ${results.length}`);
 }
 
 run();
