@@ -90,18 +90,34 @@ function updateCookies(response) {
     }
 }
 
+async function safeFetch(url) {
+    while (true) {
+        try {
+            const res = await fetch(url, { headers: getHeaders() });
+            updateCookies(res);
+
+            if (res.status === 429) {
+                console.log(`└ ⏳ Ліміт запитів (429). Пауза…`);
+                await delay(8000);
+                continue;
+            }
+
+            return res;
+        } catch (err) {
+            console.log(`└ ⚠️ Мережева помилка. Пауза…`);
+            await delay(5000);
+        }
+    }
+}
+
 async function processCar(plate) {
     try {
         const searchUrl = `https://back.echerha.gov.ua/api/v5/workload/search?plate_number=${encodeURIComponent(plate)}`;
-        
-        let searchRes = await fetch(searchUrl, { headers: getHeaders() });
-        updateCookies(searchRes);
+        const searchRes = await safeFetch(searchUrl);
 
-        if (searchRes.status === 429) {
-            console.log(`└ ⏳ Ліміт запитів (429). Пауза…`);
-            await delay(8000);
-            searchRes = await fetch(searchUrl, { headers: getHeaders() });
-            updateCookies(searchRes);
+        if (searchRes.status === 404) {
+            console.log(`└ ⚪ Немає в черзі (404)`);
+            return null;
         }
         
         const rawText = await searchRes.text();
@@ -132,15 +148,11 @@ async function processCar(plate) {
         }
 
         const detailsUrl = `https://back.echerha.gov.ua/api/v5/workload/1/checkpoints/${carBase.checkpoint_id}/details/${carBase.shared_type}/${carBase.queue_status}?page=1&plate_number=${encodeURIComponent(plate)}`;
-        
-        let detailsRes = await fetch(detailsUrl, { headers: getHeaders() });
-        updateCookies(detailsRes);
+        const detailsRes = await safeFetch(detailsUrl);
 
-        if (detailsRes.status === 429) {
-            console.log(`└ ⏳ Ліміт запитів (429) на деталях. Пауза…`);
-            await delay(8000);
-            detailsRes = await fetch(detailsUrl, { headers: getHeaders() });
-            updateCookies(detailsRes);
+        if (detailsRes.status === 404) {
+            console.log(`└ ⚪ Деталі не знайдені (404)`);
+            return null;
         }
         
         const rawDetailsText = await detailsRes.text();
@@ -172,7 +184,7 @@ async function processCar(plate) {
             checkpoint: detailsData.checkpoint
         };
     } catch (error) {
-        console.error(`  ⚠️ Помилка скрипта:`, error.message);
+        console.error(`  ⚠️ Помилка виконання:`, error.message);
         return null;
     }
 }
