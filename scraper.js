@@ -53,29 +53,61 @@ const cars = [
 ];
 
 const sessionDeviceId = crypto.randomUUID();
+const USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:156.0) Gecko/20100101 Firefox/156.0';
 
-const HEADERS = {
+let sessionCookies = '';
+
+function getHeaders() {
+    const headers = {
     'Accept': 'application/json',
     'Content-Type': 'application/json',
-    'x-client-locale': 'uk',
-    'x-device-id': sessionDeviceId,
-    'x-device-name': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)',
-    'x-user-agent': 'UABorder/3.10.0 Web/1.1.0 User/guest',
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36',
-    'Accept-Language': 'uk-UA,uk;q=0.9,en-US;q=0.8,en;q=0.7'
-};
+        'Accept-Language': 'uk-UA,uk;q=0.9,ru;q=0.8,en-US;q=0.7,en;q=0.6',
+        'Connection': 'keep-alive',
+        'Origin': 'https://echerha.gov.ua',
+        'Referer': 'https://echerha.gov.ua/',
+        'Sec-Fetch-Dest': 'empty',
+        'Sec-Fetch-Mode': 'cors',
+        'Sec-Fetch-Site': 'same-site',
+        'User-Agent': USER_AGENT,
+        'x-client-locale': 'uk',
+        'x-device-id': sessionDeviceId,
+        'x-device-name': USER_AGENT,
+        'x-user-agent': 'UABorder/3.11.0 Web/1.1.0 User/guest'
+    };
+    if (sessionCookies) {
+        headers['Cookie'] = sessionCookies;
+    }
+    return headers;
+}
 
-const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms + Math.random() * 1000));
+const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+function updateCookies(response) {
+    const setCookieHeader = response.headers.get('set-cookie');
+    if (setCookieHeader) {
+        const cookies = setCookieHeader.split(',').map(c => c.split(';')[0]);
+        sessionCookies = cookies.join('; ');
+    }
+}
 
 async function processCar(plate) {
     try {
         const searchUrl = `https://back.echerha.gov.ua/api/v5/workload/search?plate_number=${encodeURIComponent(plate)}`;
-        const searchRes = await fetch(searchUrl, { headers: HEADERS });
+        
+        let searchRes = await fetch(searchUrl, { headers: getHeaders() });
+        updateCookies(searchRes);
+
+        if (searchRes.status === 429) {
+            console.log(`└ ⏳ Ліміт запитів (429). Чекаємо 10 секунд...`);
+            await delay(10000);
+            searchRes = await fetch(searchUrl, { headers: getHeaders() });
+            updateCookies(searchRes);
+        }
         
         const rawText = await searchRes.text();
 
         if (!searchRes.ok) {
-            console.log(`  ❌ Відмовлено сервером (Помилка HTTP ${searchRes.status}). Можливо блок Cloudflare.`);
+            console.log(`└ ❌ Відмовлено сервером (HTTP ${searchRes.status})`);
             return null;
         }
 
@@ -83,29 +115,38 @@ async function processCar(plate) {
         try {
             searchData = JSON.parse(rawText);
         } catch (e) {
-            console.log(`  🛑 Блокування (Капча). Сервер повернув HTML замість JSON.`);
+            console.log(`└ 🛑 Блокування (Капча/HTML)`);
             return null;
         }
 
         if (!searchData.data || searchData.data.length === 0) {
-            console.log(`  ⚪ Машини немає в черзі`);
+            console.log(`└ ⚪ Немає в черзі`);
             return null;
         }
 
         const carBase = searchData.data[0];
 
         if (carBase.queue_status === 50) {
-            console.log(`  🟢 Вже на контролі (Заїхала на ММПП)`);
+            console.log(`└ 🟢 На контролі`);
             return null;
         }
 
         const detailsUrl = `https://back.echerha.gov.ua/api/v5/workload/1/checkpoints/${carBase.checkpoint_id}/details/${carBase.shared_type}/${carBase.queue_status}?page=1&plate_number=${encodeURIComponent(plate)}`;
-        const detailsRes = await fetch(detailsUrl, { headers: HEADERS });
+        
+        let detailsRes = await fetch(detailsUrl, { headers: getHeaders() });
+        updateCookies(detailsRes);
+
+        if (detailsRes.status === 429) {
+            console.log(`└ ⏳ Ліміт запитів (429) на деталях. Чекаємо 10 сек...`);
+            await delay(10000);
+            detailsRes = await fetch(detailsUrl, { headers: getHeaders() });
+            updateCookies(detailsRes);
+        }
         
         const rawDetailsText = await detailsRes.text();
         
         if (!detailsRes.ok) {
-            console.log(`  ❌ Помилка деталей (HTTP ${detailsRes.status}).`);
+            console.log(`└ ❌ Помилка деталей (HTTP ${detailsRes.status})`);
             return null;
         }
 
@@ -113,32 +154,32 @@ async function processCar(plate) {
         try {
             detailsData = JSON.parse(rawDetailsText);
         } catch (e) {
-            console.log(`  🛑 Блокування на етапі деталей (Капча).`);
+            console.log(`└ 🛑 Блокування на деталях (Капча/HTML)`);
             return null;
         }
 
         const details = detailsData.data[0];
         
         if (details.time_on_inspection) {
-            console.log(`  🟡 Знаходиться на інспекції`);
+            console.log(`└ 🟡 На інспекції`);
             return null;
         }
 
-        console.log(`  ✅ Успішно знайдено в черзі!`);
+        console.log(`└ ✅ Успішно знайдено!`);
         return {
             plate: plate,
             details: details,
             checkpoint: detailsData.checkpoint
         };
     } catch (error) {
-        console.error(`  ⚠️ Критична помилка скрипта:`, error.message);
+        console.error(`  ⚠️ Помилка скрипта:`, error.message);
         return null;
     }
 }
 
 async function run() {
     console.log('Початок сканування...');
-    console.log(`Згенеровано Session ID: ${sessionDeviceId}`);
+    console.log(`Session ID: ${sessionDeviceId}`);
     const startTime = Date.now();
     const results = [];
 
@@ -147,7 +188,9 @@ async function run() {
         const data = await processCar(cars[i]);
         if (data) results.push(data);
         
-        if (i < cars.length - 1) await delay(2500);
+        if (i < cars.length - 1) {
+            await delay(2500 + Math.random() * 1000);
+        }
     }
 
     const endTime = Date.now();
