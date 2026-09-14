@@ -94,7 +94,7 @@ function updateCookies(response) {
     }
 }
 
-async function safeFetch(url, retries = 3) {
+async function safeFetch(url, retries = 8) {
     for (let attempt = 1; attempt <= retries; attempt++) {
         try {
             const res = await fetch(url, { headers: getHeaders() });
@@ -125,7 +125,17 @@ async function processCar(plate) {
             return null;
         }
 
+        if (searchRes.status === 204 || searchRes.status === 404) {
+            console.log(`└ ⚪ Немає в черзі`);
+            return null;
+        }
+
         const rawText = await searchRes.text();
+
+        if (!searchRes.ok) {
+            console.log(`└ ❌ Відмовлено сервером (HTTP ${searchRes.status})`);
+            return null;
+        }
 
         let searchData;
         try {
@@ -153,7 +163,17 @@ async function processCar(plate) {
 
         if (!detailsRes) return null;
 
+        if (detailsRes.status === 204 || detailsRes.status === 404) {
+            console.log(`└ ⚪ Деталі відсутні`);
+            return null;
+        }
+
         const rawDetailsText = await detailsRes.text();
+
+        if (!detailsRes.ok) {
+            console.log(`└ ❌ Помилка деталей (HTTP ${detailsRes.status})`);
+            return null;
+        }
 
         let detailsData;
         try {
