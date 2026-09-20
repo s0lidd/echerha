@@ -3,6 +3,10 @@ name: Update Echerha Data
 on:
   workflow_dispatch:
 
+concurrency:
+  group: update-echerha-data
+  cancel-in-progress: true
+
 jobs:
   update-data:
     runs-on: ubuntu-latest
@@ -30,4 +34,8 @@ jobs:
 
           git add data.json
 
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update data.json" && git push origin data)
+          if ! git diff --quiet || ! git diff --staged --quiet; then
+            git commit -m "Auto-update data.json"
+            git pull --rebase origin data
+            git push origin data
+          fi
